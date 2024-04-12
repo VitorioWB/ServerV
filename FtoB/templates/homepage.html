@@ -12,8 +12,23 @@
 <body>
 <h1>FtoB - Primeiras impressões</h1>
 
-<h3>*Startup em desenvolvimento!*</h3>
+    {%block formulario%}
+<form method="POST">
+    {{form.csrf_token}}
+
+        {{form.email.label()}} {{form.email()}}
+        {{form.senha.label()}}  {{form.senha()}}
+
+        {{form.botao_confirmacao()}}
+</form>
+    {%endblock%}
+
+
+<h4>*Startup em desenvolvimento!*</h3>
 
 </body>
 {% endblock %}
+
+
+
 </html>
